@@ -8,41 +8,49 @@
   </div>
   <div class="banner-menu">
     <div class="banner-menu-links">
-      <div><a href="#">Konto</a></div>
+      <div><a href="#" id="show-menu">Konto</a></div>
       <div><a href="#">Priser</a></div>
-      <div><a href="#">Boka simskola</a></div>
+      <div><a href="#">Bli medlem</a></div>
       <div><a href="#">Om oss</a></div>
       <div><a href="#">Om anläggningen</a></div>
     </div>
-  </div>   
+  </div>
   <div class="main-content">
-    <div class="loginContainer ">      
-      <form id="login-form" class="login-windows">
+    <div class="loginContainer hidden" id="login-menu">
+      <form class="login-windows" id="login-form">
         <p id="error-msg-login" class="error-msg">Invalid Username/Password!</p>
         <input
           id="user"
-          class="login-window"
-          name="#"
+          class="login-window"          
           placeholder="User Name"
           type="text"
         />
         <input
           id="pass"
-          class="login-window"
-          name="#"
+          class="login-window"          
           placeholder="Password"
           type="password"
         />
         <div class="btn-row">
           <div>
-            <input type="button" value="SIGN IN" id="login-btn-in" class="btn" />
+            <input
+              type="button"
+              value="SIGN IN"
+              id="login-btn-in"
+              class="btn"
+            />
           </div>
           <div>
-            <input type="button" value="SIGN OUT" id="login-btn-up" class="btn" />
+            <input
+              type="button"
+              value="SIGN OUT"
+              id="login-btn-out"
+              class="btn"
+            />
           </div>
         </div>
       </form>
-    </div> 
+    </div>
     <img src="./img/pool.jpg" />
     <div class="main-content-row-1">
       <h3>Nyheter</h3>
@@ -73,7 +81,15 @@
         <li>Fredag kl. 5.45-19.30</li>
         <li>Lördag kl. 9-14</li>
         <li>Söndag Stängt</li>
-      </ul>
+        <li>Vid rödadagar kan öppettiderna avvika</li>               
+      </ul> 
+      <h4>Funktionärsutbildning</h4>
+      <p>
+        Praesent 24 hendrerit 9.00 - 13.30<br/>
+        Taciti: Torquent per, Viverra <br/>      
+        Aliquam: Conubia nostra, Nam vel<br/>      
+        Phasellus porttitor sit amet: consectetur<br/>      
+        Donec sociosqu 22 hendrerit kl. 12.00</p>     
     </div>
     <div class="main-content-row-2">
       <h3>Ordningsregler</h3>
@@ -100,10 +116,28 @@
             tristique.
           </li>
         </b>
-      </ol>      
+      </ol><br/>
+      <h3>Tävlings information</h3>
+      <p>
+        Praesent tempor luctus magna non vulputate. Aliquam erat
+        volutpat. Nam vel viverra tellus. Donec tristique consectetur est a
+        vulputate. Sed hendrerit, purus at semper finibus, mi ex fringilla nisi,
+        non convallis orci nulla a nisi. Class aptent taciti sociosqu ad litora
+        torquent per conubia nostra, per inceptos himenaeos.
+      </p>
+      <h4>Kommande tävlingar</h4>
+      <ul>
+        <li>Praesent 05</li>
+        <li>Tempor 08</li>
+        <li>Vulputate 15</li>                      
+      </ul> 
+      <img src="./img/comp.jpg" />
     </div>
   </div>
   <div class="foot-banner">
-    <p></p>
+    <p>Kontakta oss</p>   
+    <p>Se våra samarbetspartners och sponsorer</p>  
+    <p>Ladda ner medlemsappen</p>         
   </div>
+  <script src="./script.js"></script>
 </body>
