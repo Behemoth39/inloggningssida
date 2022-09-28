@@ -1,94 +1,99 @@
+// EJ FÄRDIG KOMMENTERAT
+
+//Objekt som innehåller alla deklarationer som ska användas på flera ställen
 const app = {
-    welcome: document.getElementById("wel-msg"),
-    login: document.getElementById("log-in"),
-    logout: document.getElementById("log-out"),
-    username: document.getElementById("user"),
-    password: document.getElementById("pass"),
-    againBtn: document.getElementById("again-btn"),
-    loginBtn: document.getElementById("login-btn"),
-    loginForm: document.getElementById("login-form"),
-    loginMenu: document.getElementById("login-menu"),                 
-    errorMsgUser: document.getElementById("error-msg-login"),   
-    savedUsername: "Sara",    
-    savedPassword: "qwe123"    
-  };
+  welcome: document.getElementById("wel-msg"),
+  login: document.getElementById("log-in"),
+  logout: document.getElementById("log-out"),
+  username: document.getElementById("user"),
+  password: document.getElementById("pass"),
+  againBtn: document.getElementById("again-btn"),
+  loginBtn: document.getElementById("login-btn"),
+  loginForm: document.getElementById("login-form"),
+  loginMenu: document.getElementById("login-menu"),
+  loginH1: document.getElementById("log-h1"),
+  errorMsgUser: document.getElementById("error-msg-login"),
+  userLogged: localStorage.getItem("userLogged"),
+};
 
-  function clearForm(){
-    app.loginForm.user.value = null;
-    app.loginForm.pass.value = null;
-  };
+//Rensar text i användarnamn och lösenords rutorna
+function clearForm() {
+  app.loginForm.user.value = null;
+  app.loginForm.pass.value = null;
+}
 
-  function errorMsg() {
-    app.loginBtn.classList.add("hidden"); 
-    app.username.classList.add("hidden");
-    app.password.classList.add("hidden");      
-    app.againBtn.classList.add("hidden");
-    app.againBtn.classList.remove("hidden");  
-    app.errorMsgUser.classList.remove("hidden");     
-  };
+//Visar felmeddelande och visar tillbaka knappen istället för login
+function errorMsg() {
+  app.loginBtn.classList.add("hidden");
+  app.username.classList.add("hidden");
+  app.password.classList.add("hidden");
+  app.againBtn.classList.add("hidden");
+  app.loginH1.classList.add("hidden");
+  app.againBtn.classList.remove("hidden");
+  app.errorMsgUser.classList.remove("hidden");
+}
 
-  function removeErrorMsg() {
-    app.loginBtn.classList.remove("hidden"); 
-    app.username.classList.remove("hidden");
-    app.password.classList.remove("hidden");      
-    app.againBtn.classList.remove("hidden");
-    app.againBtn.classList.add("hidden");  
-    app.errorMsgUser.classList.add("hidden");      
-  };
-  
-  function removeLoginMenu() {
-    app.loginMenu.classList.add("hidden"); 
-    app.login.classList.add("hidden");   
-    app.logout.classList.remove("hidden");  
-    app.welcome.textContent += "Välkommen, du är nu inloggad!";      
-  };
-  
-  function addLoginMenu() {
-    app.login.classList.remove("hidden");   
-    app.logout.classList.add("hidden"); 
-    app.welcome.textContent = null;       
-  };
+//Återställer ändringar som funktionen ovan gjort
+function removeErrorMsg() {
+  app.loginBtn.classList.remove("hidden");
+  app.username.classList.remove("hidden");
+  app.password.classList.remove("hidden");
+  app.againBtn.classList.remove("hidden");
+  app.loginH1.classList.remove("hidden");
+  app.againBtn.classList.add("hidden");
+  app.errorMsgUser.classList.add("hidden");
+}
 
-  document.getElementById("log-in").addEventListener("click", (e) => {
-    e.preventDefault;
-    app.loginMenu.classList.toggle("hidden");           
-  });
-  
-  document.getElementById("login-btn").addEventListener("click", (e) => {
-    e.preventDefault;
-    username = app.loginForm.user.value;
-    password = app.loginForm.pass.value;
- 
-    for (let i = 0; i < app.savedUsername.length; i++) {
-      if (username == app.savedUsername && password == app.savedPassword) {                
-        removeLoginMenu();       
-        break         
-      } else {
-        errorMsg();      
-      }
-    }
-  });
+function removeLoginMenu() {
+  app.loginMenu.classList.add("hidden");
+  app.login.classList.add("hidden");
+  app.logout.classList.remove("hidden");
+  app.welcome.textContent += "Välkommen, du är nu inloggad!";
+}
 
-  document.getElementById("again-btn").addEventListener("click", (e) => {
-    e.preventDefault;
-    removeErrorMsg();  
-    clearForm();      
-  });
+function addLoginMenu() {
+  app.login.classList.remove("hidden");
+  app.logout.classList.add("hidden");
+  app.welcome.textContent = null;
+}
 
-  document.getElementById("log-out").addEventListener("click", (e) => {
-    e.preventDefault;
-    addLoginMenu();   
-    clearForm();      
-  });
-  
-  /* save locally instead
-    
-   localStorage.setItem('username'); //save in array 
-   localStorage.setItem('password'); //save in array 
-  let saveduser =  localStorage.setItem('username');
-  let savedpass =  localStorage.setItem('password');
-  localStorage.removeItem('password');
-  localStorage.clear;
-    
-   */
-  
+document.getElementById("log-in").addEventListener("click", (e) => {
+  e.preventDefault;
+  app.loginMenu.classList.remove("hidden");
+});
+document.getElementById("closebtn").addEventListener("click", (e) => {
+  e.preventDefault;
+  app.loginMenu.classList.add("hidden");
+});
+
+document.getElementById("login-btn").addEventListener("click", (e) => {
+  e.preventDefault;
+  let username = app.loginForm.user.value;
+  let password = app.loginForm.pass.value;
+
+  if (username == "Sara" && password == "qwe123") {
+    localStorage.setItem("userLogged", "true");
+    removeLoginMenu();
+  } else {
+    errorMsg();
+  }
+});
+
+if (app.userLogged) {
+  removeLoginMenu();
+} else {
+  addLoginMenu();
+}
+
+document.getElementById("again-btn").addEventListener("click", (e) => {
+  e.preventDefault;
+  removeErrorMsg();
+  clearForm();
+});
+
+document.getElementById("log-out").addEventListener("click", (e) => {
+  e.preventDefault;
+  addLoginMenu();
+  clearForm();
+  localStorage.clear();
+});

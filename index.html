@@ -1,11 +1,36 @@
-<!DOCTYPE html>
+<!DOCTYPE html> <!-- EJ FÄRDIG KOMMENTERAT -->
 <html>
   <link rel="stylesheet" href="style.css" />
 </html>
 <body>
+  <!-- Meny för att logga in  med användarnamn och lösenord -->
+  <!-- Klassen hidden läggs till och tas bort beroende på vad som ska visas -->
+  <div class="loginContainer hidden" id="login-menu">
+    <div id="closebtn">X</div>
+    <form class="login-windows" id="login-form">
+      <p id="error-msg-login" class="hidden">Felaktigt användarnamn/lösenord!</p>
+      <h1 id="log-h1">LOGIN</h1>
+      <input id="user" class="login-window" placeholder="namn" type="text" />
+      <input id="pass" class="login-window" placeholder="lösenord" type="password" />
+      <div class="btn-row">
+        <div>
+          <input type="button" value="LOGGA IN" id="login-btn" class="btn" />
+        </div>
+        <div>
+          <input
+            type="button"
+            value="FÖRSÖK IGEN"
+            id="again-btn"
+            class="btn hidden"
+          />
+        </div>
+      </div>
+    </form>
+  </div>
   <div class="banner">
     <h1>Lorem lipsum Simsällskap</h1>
   </div>
+  <!-- Meny med tomma länkar, används för att logga in och ut -->
   <div class="banner-menu">
     <div class="banner-menu-links">
       <div class="hidden" id="log-out"><a href="#">Logga ut</a></div>
@@ -16,57 +41,32 @@
       <div><a href="">Om anläggningen</a></div>
     </div>
   </div>
+   <!--  Huvud innehållet på sidan, uppdelat i 2 rader -->
   <div class="main-content">
-    <div class="loginContainer hidden" id="login-menu">
-      <form class="login-windows" id="login-form">
-        <p id="error-msg-login" class="hidden">
-          Felaktigt användarnamn/lösenord!
-        </p>
-        <input id="user" class="login-window" placeholder="namn" type="text" />
-        <input
-          id="pass"
-          class="login-window"
-          placeholder="lösenord"
-          type="password"
-        />
-        <div class="btn-row">
-          <div>
-            <input type="button" value="LOGGA IN" id="login-btn" class="btn" />
-          </div>
-          <div>
-            <input
-              type="button"
-              value="FÖRSÖK IGEN"
-              id="again-btn"
-              class="btn hidden"
-            />
-          </div>
-        </div>
-      </form>
-    </div>
+    <!-- tom rubrik som skrivs till i skriptet vid inloggning -->
     <h1 id="wel-msg"></h1>
     <img src="./img/pool.jpg" />
+    <!-- delar upp inenehållet i 2 rader, rad till vänster -->
     <div class="main-content-row-1">
       <h3>Nyheter</h3>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sed
-        volutpat tellus. Duis egestas diam fermentum, lobortis lorem sed, luctus
-        mi. Donec arcu lectus, consectetur et sapien sit amet, placerat feugiat
-        urna. Cras eget efficitur nisi, id ornare arcu. Vivamus accumsan et diam
-        vitae interdum. Suspendisse nec leo lobortis, ultricies risus id, varius
-        nisl. Donec bibendum eros ut blandit euismod. Integer non urna non massa
-        fermentum rhoncus vitae gravida mi. Morbi sed lorem eu ante fermentum
-        pharetra eget nec velit. Aenean eget ante et ante sagittis tincidunt in
-        a justo. Phasellus porttitor sit amet ligula ac cursus. Mauris lacinia,
-        lacus ac condimentum fringilla, augue nibh luctus libero, convallis
-        lobortis erat magna elementum dolor. Aliquam blandit scelerisque
-        imperdiet. Praesent tempor luctus magna non vulputate. Aliquam erat
-        volutpat. Nam vel viverra tellus. Donec tristique consectetur est a
-        vulputate. Sed hendrerit, purus at semper finibus, mi ex fringilla nisi,
-        non convallis orci nulla a nisi. Class aptent taciti sociosqu ad litora
-        torquent per conubia nostra, per inceptos himenaeos.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sed volutpat
+        tellus. Duis egestas diam fermentum, lobortis lorem sed, luctus mi. Donec
+        arcu lectus, consectetur et sapien sit amet, placerat feugiat urna. Cras eget
+        efficitur nisi, id ornare arcu. Vivamus accumsan et diam vitae interdum.
+        Suspendisse nec leo lobortis, ultricies risus id, varius nisl. Donec bibendum
+        eros ut blandit euismod. Integer non urna non massa fermentum rhoncus vitae
+        gravida mi. Morbi sed lorem eu ante fermentum pharetra eget nec velit. Aenean
+        eget ante et ante sagittis tincidunt in a justo. Phasellus porttitor sit amet
+        ligula ac cursus. Mauris lacinia, lacus ac condimentum fringilla, augue nibh
+        luctus libero, convallis lobortis erat magna elementum dolor. Aliquam blandit
+        scelerisque imperdiet. Praesent tempor luctus magna non vulputate. Aliquam
+        erat volutpat. Nam vel viverra tellus. Donec tristique consectetur est a
+        vulputate. Sed hendrerit, purus at semper finibus, mi ex fringilla nisi, non
+        convallis orci nulla a nisi. Class aptent taciti sociosqu ad litora torquent
+        per conubia nostra, per inceptos himenaeos.
       </p>
-      <h4>Ordinarie Öppettider</h4>
+      <h4>Ordinarie öppettider</h4>
       <ul>
         <li>Måndag kl. 5.45-16</li>
         <li>Tisdag kl. 8-21</li>
@@ -75,7 +75,7 @@
         <li>Fredag kl. 5.45-19.30</li>
         <li>Lördag kl. 9-14</li>
         <li>Söndag Stängt</li>
-        <li>Vid rödadagar kan öppettiderna avvika</li>
+        <li>Vid helgdagar kan öppettiderna avvika</li>
       </ul>
       <h4>Funktionärsutbildning</h4>
       <p>
@@ -85,16 +85,16 @@
         Phasellus porttitor sit amet: consectetur<br />
         Donec sociosqu 22 hendrerit kl. 12.00
       </p>
-    </div>
+    </div>   
+    <!-- delar upp inenehållet i 2 rader, rad till höger --> 
     <div class="main-content-row-2">
       <h3>Ordningsregler</h3>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sed
-        volutpat tellus. Duis egestas diam fermentum, lobortis lorem sed, luctus
-        mi. Donec arcu lectus, consectetur et sapien sit amet, placerat feugiat
-        urna. Cras eget efficitur nisi, id ornare arcu. Vivamus accumsan et diam
-        vitae interdum. Suspendisse nec leo lobortis, ultricies risus id, varius
-        nisl.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sed volutpat
+        tellus. Duis egestas diam fermentum, lobortis lorem sed, luctus mi. Donec
+        arcu lectus, consectetur et sapien sit amet, placerat feugiat urna. Cras eget
+        efficitur nisi, id ornare arcu. Vivamus accumsan et diam vitae interdum.
+        Suspendisse nec leo lobortis, ultricies risus id, varius nisl.
       </p>
       <ol>
         <b>
@@ -103,8 +103,7 @@
           <li>Ut quis nisl fermentum neque tempus placerat.</li>
           <li>Vestibulum ullamcorper massa a ornare pulvinar.</li>
           <li>
-            Phasellus lobortis lectus non dui bibendum, quis maximus leo
-            imperdiet.
+            Phasellus lobortis lectus non dui bibendum, quis maximus leo imperdiet.
           </li>
           <li>
             Donec luctus sapien eget lectus condimentum, sit amet tempus ante
@@ -113,23 +112,25 @@
         </b>
       </ol>
       <br />
-      <h3>Tävlings information</h3>
+      <h3>Tävlingsinformation</h3>
       <p>
-        Praesent tempor luctus magna non vulputate. Aliquam erat volutpat. Nam
-        vel viverra tellus. Donec tristique consectetur est a vulputate. Sed
-        hendrerit, purus at semper finibus, mi ex fringilla nisi, non convallis
-        orci nulla a nisi. Class aptent taciti sociosqu ad litora torquent per
-        conubia nostra, per inceptos himenaeos.
+        Praesent tempor luctus magna non vulputate. Aliquam erat volutpat. Nam vel
+        viverra tellus. Donec tristique consectetur est a vulputate. Sed hendrerit,
+        purus at semper finibus, mi ex fringilla nisi, non convallis orci nulla a
+        nisi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+        inceptos himenaeos.
       </p>
       <h4>Kommande tävlingar</h4>
       <ul>
         <li>Praesent 05</li>
+        <li>Nostra 22</li>
         <li>Tempor 08</li>
         <li>Vulputate 15</li>
       </ul>
       <img src="./img/comp.jpg" />
     </div>
   </div>
+  <!-- banderoll i botten av sidan -->
   <div class="foot-banner">
     <p>Kontakta oss</p>
     <p>Se våra samarbetspartners och sponsorer</p>

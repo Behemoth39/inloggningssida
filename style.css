@@ -1,3 +1,5 @@
+/* EJ FÄRDIG KOMMENTERAT */
+
 html {
   height: 100%; /* verkar inte hjälpa, minskar man fönster så blir den inte 100% i höjd */
 }
@@ -7,7 +9,7 @@ body {
   margin: 0%;
   min-height: 100%;
   background-image: url("./img/underwater.jpg");
-  background-size: cover; /* kan inte få bakgrundsbilden att helt fylla sidan vid vissa storlekar av fönster (se ovan) */
+  background-size: cover; /* kan inte få bakgrundsbilden att helt fylla sidan vid vissa storlekar av fönstret (se ovan) */
   /*background-repeat: no-repeat; /* vilket göra att jag inte kan använda no-repeat */
 }
 .banner {
@@ -58,17 +60,23 @@ body {
   margin-top: 2%;
   margin: auto;
 }
-.loginContainer {
-  position: absolute;
-  height: fit-content;
-  width: fit-content;
+.loginContainer { /* login menyn */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  align-items: center;
+  justify-content: center;
+  height: 380px;
+  width: 400px;
   display: flex;
   flex-direction: column;
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
   color: purple;
   padding: 10px;
-  background-color: #bcdcff;
+  background-color: #e3f1ff;
+  border-radius: 20%;
 }
 .loginContainer p {
   margin: 10px;
@@ -76,13 +84,26 @@ body {
 }
 .login-windows {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
-  width: fit-content;
+}
+#closebtn {
+  position: absolute;
+  top: 35px;
+  right: 45px;
+  width: 25px;
+  height: 25px;
+  background: grey;
+  color: white;
+  line-height: 25px;
+  border-radius: 15px;
+  cursor: pointer;
 }
 .login-window {
   padding: 8px;
-  width: 220px;
-  text-indent: 30px;
+  width: 300px;
+  height: 25px;
+  text-indent: 50px;
 }
 .login-window:last-of-type {
   margin-top: 20px;
@@ -105,6 +126,11 @@ body {
   margin-bottom: 15px;
   font-size: 250%;
 }
+#log-h1 {
+  color: black;
+  margin-bottom: 25px;
+  font-size: 250%;
+}
 .btn-row {
   display: flex;
   flex-direction: row;
@@ -112,13 +138,13 @@ body {
   margin: auto;
 }
 .btn-row > div {
-  margin-top: 15px;
+  margin-top: 25px;
 }
 .btn {
-  width: 150px;
+  width: 180px;
   color: white;
   background: linear-gradient(90deg, rgb(0, 68, 255) 0%, rgb(0, 162, 255) 100%);
-  padding: 10px 20px;
+  padding: 15px 45px;
   font-size: 75%;
   font-weight: 900;
   cursor: pointer;
@@ -129,7 +155,7 @@ body {
   color: rgb(0, 255, 255);
   transform: scaleX(0.9) scaleY(0.9);
 }
-.main-content {
+.main-content { /* Huvud innehållet på sidan, inehåller 2 rader */
   width: 950px;
   margin: auto;
   margin-top: 0%;
@@ -141,7 +167,7 @@ body {
   padding-right: 20px;
   padding-bottom: 20px;
 }
-.main-content-row-1 {
+.main-content-row-1 { /* används för det rad uppdelade innehållet */
   margin-top: 20px;
   width: 425px;
   margin-right: 40px;
