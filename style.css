@@ -190,6 +190,6 @@ body {
   margin-bottom: 0%;
   text-align: center;
 }
-.hidden {
+.hidden { /* används där element ska gömmas */
   display: none;
 }
