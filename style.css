@@ -1,5 +1,5 @@
 html {
-  height: 100%; /* verkar inte hjälpa, minskat man fönster så blir den inte 100% i höjd */  
+  height: 100%; /* verkar inte hjälpa, minskar man fönster så blir den inte 100% i höjd */
 }
 body {
   display: flex;
@@ -71,7 +71,7 @@ body {
   background-color: #bcdcff;
 }
 .loginContainer p {
-  margin-top: 10px;
+  margin: 10px;
   color: red;
 }
 .login-windows {
@@ -99,26 +99,26 @@ body {
   background-size: 10%;
   background-color: white;
 }
+#wel-msg {
+  margin: auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-size: 250%;
+}
 .btn-row {
   display: flex;
   flex-direction: row;
   width: fit-content;
+  margin: auto;
 }
 .btn-row > div {
-  margin-top: 20px;
-}
-.btn-row > div:first-of-type {
-  margin-right: 15px;
+  margin-top: 15px;
 }
 .btn {
-  width: fit-content;
+  width: 150px;
   color: white;
-  background: linear-gradient(
-    90deg,
-    rgb(0, 68, 255) 0%,
-    rgb(0, 162, 255) 100%
-  );
-  padding: 10px 25px;
+  background: linear-gradient(90deg, rgb(0, 68, 255) 0%, rgb(0, 162, 255) 100%);
+  padding: 10px 20px;
   font-size: 75%;
   font-weight: 900;
   cursor: pointer;
@@ -128,9 +128,6 @@ body {
 .btn:hover {
   color: rgb(0, 255, 255);
   transform: scaleX(0.9) scaleY(0.9);
-}
-.error-msg {  
-  display: none;
 }
 .main-content {
   width: 950px;

@@ -1,10 +1,13 @@
 const app = {
+    welcome: document.getElementById("wel-msg"),
+    login: document.getElementById("log-in"),
+    logout: document.getElementById("log-out"),
+    username: document.getElementById("user"),
+    password: document.getElementById("pass"),
+    againBtn: document.getElementById("again-btn"),
+    loginBtn: document.getElementById("login-btn"),
     loginForm: document.getElementById("login-form"),
-    LoginMenu: document.getElementById("login-menu"),
-    signIn: document.getElementById("login-btn-in"),
-    signOut: document.getElementById("login-btn-out"),
-    loginBtn: document.getElementById("login-btn-in"),
-    signOutBtn: document.getElementById("login-btn-out"),      
+    loginMenu: document.getElementById("login-menu"),                 
     errorMsgUser: document.getElementById("error-msg-login"),   
     savedUsername: "Sara",    
     savedPassword: "qwe123"    
@@ -16,43 +19,66 @@ const app = {
   };
 
   function errorMsg() {
-    app.errorMsgUser.classList.remove("error-msg");    
-    clearForm();
+    app.loginBtn.classList.add("hidden"); 
+    app.username.classList.add("hidden");
+    app.password.classList.add("hidden");      
+    app.againBtn.classList.add("hidden");
+    app.againBtn.classList.remove("hidden");  
+    app.errorMsgUser.classList.remove("hidden");     
   };
 
   function removeErrorMsg() {
-    app.errorMsgUser.classList.add("error-msg");    
-    clearForm();
+    app.loginBtn.classList.remove("hidden"); 
+    app.username.classList.remove("hidden");
+    app.password.classList.remove("hidden");      
+    app.againBtn.classList.remove("hidden");
+    app.againBtn.classList.add("hidden");  
+    app.errorMsgUser.classList.add("hidden");      
   };
   
   function removeLoginMenu() {
-    app.LoginMenu.classList.add("hidden");   
+    app.loginMenu.classList.add("hidden"); 
+    app.login.classList.add("hidden");   
+    app.logout.classList.remove("hidden");  
+    app.welcome.textContent += "Välkommen, du är nu inloggad!";      
   };
   
   function addLoginMenu() {
-    app.LoginMenu.classList.remove("hidden");       
+    app.login.classList.remove("hidden");   
+    app.logout.classList.add("hidden"); 
+    app.welcome.textContent = null;       
   };
+
+  document.getElementById("log-in").addEventListener("click", (e) => {
+    e.preventDefault;
+    app.loginMenu.classList.toggle("hidden");           
+  });
   
-  document.getElementById("login-btn-in").addEventListener("click", (e) => {
+  document.getElementById("login-btn").addEventListener("click", (e) => {
     e.preventDefault;
     username = app.loginForm.user.value;
     password = app.loginForm.pass.value;
-  // maybe make login button disappear when logged in?
+ 
     for (let i = 0; i < app.savedUsername.length; i++) {
-      if (username == app.savedUsername && password == app.savedPassword) {
-        removeErrorMsg()
-        alert("Välkommen") 
-        removeLoginMenu()       
+      if (username == app.savedUsername && password == app.savedPassword) {                
+        removeLoginMenu();       
         break         
       } else {
         errorMsg();      
       }
     }
   });
-  
-  document.getElementById("show-menu").addEventListener("click", (e) => {
+
+  document.getElementById("again-btn").addEventListener("click", (e) => {
     e.preventDefault;
-    app.LoginMenu.classList.toggle("hidden")       
+    removeErrorMsg();  
+    clearForm();      
+  });
+
+  document.getElementById("log-out").addEventListener("click", (e) => {
+    e.preventDefault;
+    addLoginMenu();   
+    clearForm();      
   });
   
   /* save locally instead

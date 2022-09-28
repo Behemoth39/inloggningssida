@@ -8,49 +8,51 @@
   </div>
   <div class="banner-menu">
     <div class="banner-menu-links">
-      <div><a href="#" id="show-menu">Konto</a></div>
-      <div><a href="#">Priser</a></div>
-      <div><a href="#">Bli medlem</a></div>
-      <div><a href="#">Om oss</a></div>
-      <div><a href="#">Om anläggningen</a></div>
+      <div class="hidden" id="log-out"><a href="#">Logga ut</a></div>
+      <div id="log-in"><a href="#">Logga in</a></div>
+      <div><a href="">Priser</a></div>
+      <div><a href="">Bli medlem</a></div>
+      <div><a href="">Om oss</a></div>
+      <div><a href="">Om anläggningen</a></div>
     </div>
   </div>
   <div class="main-content">
     <div class="loginContainer hidden" id="login-menu">
-      <form class="login-windows" id="login-form">
-        <p id="error-msg-login" class="error-msg">Invalid Username/Password!</p>
+      <form class="login-windows" id="login-form">        
+        <p id="error-msg-login" class="hidden">Felaktigt användarnamn/lösenord!</p>
         <input
           id="user"
           class="login-window"          
-          placeholder="User Name"
+          placeholder="namn"
           type="text"
         />
         <input
           id="pass"
           class="login-window"          
-          placeholder="Password"
+          placeholder="lösenord"
           type="password"
         />
         <div class="btn-row">
           <div>
             <input
               type="button"
-              value="SIGN IN"
-              id="login-btn-in"
+              value="LOGGA IN"
+              id="login-btn"
               class="btn"
             />
-          </div>
+          </div>  
           <div>
             <input
               type="button"
-              value="SIGN OUT"
-              id="login-btn-out"
-              class="btn"
+              value="FÖRSÖK IGEN"
+              id="again-btn"
+              class="btn hidden"
             />
-          </div>
+          </div>         
         </div>
       </form>
     </div>
+    <h1 id="wel-msg"></h1>
     <img src="./img/pool.jpg" />
     <div class="main-content-row-1">
       <h3>Nyheter</h3>
