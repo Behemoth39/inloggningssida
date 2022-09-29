@@ -12,7 +12,7 @@ body {
   background-size: cover; /* kan inte få bakgrundsbilden att helt fylla sidan vid vissa storlekar av fönstret (se ovan) */
   /*background-repeat: no-repeat; /* vilket göra att jag inte kan använda no-repeat */
 }
-.banner {
+.banner { /* sätter toppbannerns storlek och färg */
   height: 180px;
   width: cover;
   background-color: #bcdcff;
@@ -22,14 +22,14 @@ body {
   text-align: center;
   color: rgb(0, 60, 100);
 }
-.banner-menu {
+.banner-menu { /* sätter menyradens storklek och färg */
   display: flex;
   height: 50px;
   background-color: #8cbfe9;
   border-top: 2px solid rgb(0, 60, 110);
   border-bottom: 2px solid rgb(0, 60, 110);
 }
-.banner-menu-links {
+.banner-menu-links { /* sätter placeringen av de olika länkarna i menyraden */
   width: 950px;
   margin: auto;
   height: 50px;
@@ -47,7 +47,7 @@ body {
   color: black;
   text-decoration: none;
 }
-.foot-banner {
+.foot-banner { /* sätter botten bannerns plasering och storlek samt utseende */
   width: 100%;
   bottom: 0px;
   background-color: #bcdcff;
@@ -87,7 +87,7 @@ body {
   flex-wrap: wrap;
   flex-direction: column;
 }
-#closebtn {
+#closebtn { /* sätter en "knapp" för att stänga login menyn */
   position: absolute;
   top: 35px;
   right: 45px;
@@ -99,7 +99,7 @@ body {
   border-radius: 15px;
   cursor: pointer;
 }
-.login-window {
+.login-window { /* sätter utseende av fälten för användarnamn och lösenord*/
   padding: 8px;
   width: 300px;
   height: 25px;
@@ -131,7 +131,7 @@ body {
   margin-bottom: 25px;
   font-size: 250%;
 }
-.btn-row {
+.btn-row { /* sätter knapparnas placering */
   display: flex;
   flex-direction: row;
   width: fit-content;
@@ -140,7 +140,7 @@ body {
 .btn-row > div {
   margin-top: 25px;
 }
-.btn {
+.btn { /* sätter knapparnas utesende */
   width: 180px;
   color: white;
   background: linear-gradient(90deg, rgb(0, 68, 255) 0%, rgb(0, 162, 255) 100%);
@@ -179,7 +179,7 @@ body {
   margin-bottom: 0%;
   text-align: center;
 }
-.main-content-row-2 {
+.main-content-row-2 { /* används för det rad uppdelade innehållet */
   margin-top: 20px;
   width: 425px;
   background-color: white;

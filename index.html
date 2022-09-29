@@ -3,16 +3,20 @@
   <link rel="stylesheet" href="style.css" />
 </html>
 <body>
-  <!-- Meny för att logga in  med användarnamn och lösenord -->
-  <!-- Klassen hidden läggs till och tas bort beroende på vad som ska visas -->
+  <!--Meny för att logga in med användarnamn och lösenord 
+      samt om man angett fel visas istället ett felmeddelande och tillbaka knapp.
+      Klassen hidden läggs till och tas bort beroende på vad som ska visas -->
   <div class="loginContainer hidden" id="login-menu">
+    <!-- Text som används som knapp för att stänga login menyn -->
     <div id="closebtn">X</div>
     <form class="login-windows" id="login-form">
       <p id="error-msg-login" class="hidden">Felaktigt användarnamn/lösenord!</p>
-      <h1 id="log-h1">LOGIN</h1>
+      <h1 id="log-h1">LOGIN</h1> 
+      <!-- Fält för att skriva in lösenord och användarnamn -->
       <input id="user" class="login-window" placeholder="namn" type="text" />
       <input id="pass" class="login-window" placeholder="lösenord" type="password" />
-      <div class="btn-row">
+      <!-- Knappar i menyn för att logga in och försöka igen -->
+      <div class="btn-row"> 
         <div>
           <input type="button" value="LOGGA IN" id="login-btn" class="btn" />
         </div>
@@ -43,10 +47,10 @@
   </div>
    <!--  Huvud innehållet på sidan, uppdelat i 2 rader -->
   <div class="main-content">
-    <!-- tom rubrik som skrivs till i skriptet vid inloggning -->
+    <!-- Tom rubrik som skrivs till i skriptet vid lyckad inloggning -->
     <h1 id="wel-msg"></h1>
     <img src="./img/pool.jpg" />
-    <!-- delar upp inenehållet i 2 rader, rad till vänster -->
+    <!-- Delar upp inenehållet i 2 rader, rad till vänster -->
     <div class="main-content-row-1">
       <h3>Nyheter</h3>
       <p>
@@ -86,7 +90,7 @@
         Donec sociosqu 22 hendrerit kl. 12.00
       </p>
     </div>   
-    <!-- delar upp inenehållet i 2 rader, rad till höger --> 
+    <!-- Delar upp inenehållet i 2 rader, rad till höger --> 
     <div class="main-content-row-2">
       <h3>Ordningsregler</h3>
       <p>
@@ -130,7 +134,7 @@
       <img src="./img/comp.jpg" />
     </div>
   </div>
-  <!-- banderoll i botten av sidan -->
+  <!-- Banderoll i botten av sidan -->
   <div class="foot-banner">
     <p>Kontakta oss</p>
     <p>Se våra samarbetspartners och sponsorer</p>
