@@ -1,5 +1,4 @@
 /* EJ FÄRDIG KOMMENTERAT */
-
 html {
   height: 100%; /* verkar inte hjälpa, minskar man fönster så blir den inte 100% i höjd */
 }
@@ -47,19 +46,6 @@ body {
   color: black;
   text-decoration: none;
 }
-.foot-banner { /* sätter botten bannerns plasering och storlek samt utseende */
-  width: 100%;
-  bottom: 0px;
-  background-color: #bcdcff;
-  height: 100px;
-  border-top: 2px solid rgb(0, 60, 110);
-  display: flex;
-  flex-direction: row;
-}
-.foot-banner p {
-  margin-top: 2%;
-  margin: auto;
-}
 .loginContainer { /* login menyn */
   position: fixed;
   top: 50%;
@@ -82,11 +68,6 @@ body {
   margin: 10px;
   color: red;
 }
-.login-windows {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-}
 #closebtn { /* sätter en "knapp" för att stänga login menyn */
   position: absolute;
   top: 35px;
@@ -98,6 +79,16 @@ body {
   line-height: 25px;
   border-radius: 15px;
   cursor: pointer;
+}
+#log-h1 {
+  color: black;
+  margin-bottom: 25px;
+  font-size: 250%;
+}
+.login-windows {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
 }
 .login-window { /* sätter utseende av fälten för användarnamn och lösenord*/
   padding: 8px;
@@ -119,17 +110,6 @@ body {
   background-position: 7px;
   background-size: 10%;
   background-color: white;
-}
-#wel-msg {
-  margin: auto;
-  margin-top: 15px;
-  margin-bottom: 15px;
-  font-size: 250%;
-}
-#log-h1 {
-  color: black;
-  margin-bottom: 25px;
-  font-size: 250%;
 }
 .btn-row { /* sätter knapparnas placering */
   display: flex;
@@ -155,8 +135,14 @@ body {
   color: rgb(0, 255, 255);
   transform: scaleX(0.9) scaleY(0.9);
 }
+#wel-msg {
+  margin: auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-size: 250%;
+}
 .main-content { /* Huvud innehållet på sidan, inehåller 2 rader */
-  width: 950px;
+  width: 950px;  
   margin: auto;
   margin-top: 0%;
   display: flex;
@@ -189,6 +175,19 @@ body {
 .main-content-row-2 h3 {
   margin-bottom: 0%;
   text-align: center;
+}
+.foot-banner { /* sätter botten bannerns plasering och storlek samt utseende */
+  width: 100%;
+  bottom: 0px;
+  background-color: #bcdcff;
+  height: 100px;
+  border-top: 2px solid rgb(0, 60, 110);
+  display: flex;
+  flex-direction: row;
+}
+.foot-banner p {
+  margin-top: 2%;
+  margin: auto;
 }
 .hidden { /* används där element ska gömmas */
   display: none;
