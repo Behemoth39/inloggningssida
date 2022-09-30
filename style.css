@@ -161,7 +161,7 @@ body {
   padding-left: 15px;
   padding-right: 15px;
 }
-.main-content-row-1 h3 {
+.main-content-row-1 h3 { /* placerar innehållet i mitten */
   margin-bottom: 0%;
   text-align: center;
 }
@@ -172,7 +172,7 @@ body {
   padding-left: 15px;
   padding-right: 15px;
 }
-.main-content-row-2 h3 {
+.main-content-row-2 h3 { /* placerar innehållet i mitten */
   margin-bottom: 0%;
   text-align: center;
 }
@@ -185,7 +185,7 @@ body {
   display: flex;
   flex-direction: row;
 }
-.foot-banner p {
+.foot-banner p { /* placerar innehållet med jämna mellanrum */
   margin-top: 2%;
   margin: auto;
 }
