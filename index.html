@@ -1,7 +1,11 @@
 <!DOCTYPE html> 
-<html>
-  <link rel="stylesheet" href="style.css" />
-</html>
+<html lang=sv>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">  
+  <title>Simsällskap</title>
+</head>
 <body>
   <!--Meny för att logga in med användarnamn och lösenord 
       samt om man angett fel visas istället ett felmeddelande och tillbaka knapp.
@@ -13,12 +17,12 @@
       <p id="error-msg-login" class="hidden">Felaktigt användarnamn/lösenord!</p>
       <h1 id="log-h1">LOGIN</h1> 
       <!-- Fält för att skriva in lösenord och användarnamn -->
-      <input id="user" class="login-window" placeholder="namn" type="text" />
-      <input id="pass" class="login-window" placeholder="lösenord" type="password" />
+      <input id="user" class="login-window" placeholder="namn" type="text">
+      <input id="pass" class="login-window" placeholder="lösenord" type="password">
       <!-- Knappar i menyn för att logga in och försöka igen -->
       <div class="btn-row"> 
         <div>
-          <input type="button" value="LOGGA IN" id="login-btn" class="btn" />
+          <input type="button" value="LOGGA IN" id="login-btn" class="btn">
         </div>
         <div>
           <input
@@ -26,7 +30,7 @@
             value="FÖRSÖK IGEN"
             id="again-btn"
             class="btn hidden"
-          />
+          >
         </div>
       </div>
     </form>
@@ -49,7 +53,7 @@
   <div class="main-content">
     <!-- Tom rubrik som skrivs till i skriptet vid lyckad inloggning -->
     <h1 id="wel-msg"></h1>
-    <img src="./img/pool.jpg" />
+    <img src="./img/pool.jpg" alt="Tävlingsbassäng">
     <!-- Delar upp inenehållet i 2 rader, rad till vänster -->
     <div class="main-content-row-1">
       <h3>Nyheter</h3>
@@ -83,10 +87,10 @@
       </ul>
       <h4>Funktionärsutbildning</h4>
       <p>
-        Praesent 24 hendrerit 9.00 - 13.30<br />
-        Taciti: Torquent per, Viverra <br />
-        Aliquam: Conubia nostra, Nam vel<br />
-        Phasellus porttitor sit amet: consectetur<br />
+        Praesent 24 hendrerit 9.00 - 13.30<br>
+        Taciti: Torquent per, Viverra <br>
+        Aliquam: Conubia nostra, Nam vel<br>
+        Phasellus porttitor sit amet: consectetur<br>
         Donec sociosqu 22 hendrerit kl. 12.00
       </p>
     </div>   
@@ -100,8 +104,7 @@
         efficitur nisi, id ornare arcu. Vivamus accumsan et diam vitae interdum.
         Suspendisse nec leo lobortis, ultricies risus id, varius nisl.
       </p>
-      <ol>
-        <b>
+      <ol>        
           <li>Integer sed lectus cursus, interdum nisi at, commodo neque.</li>
           <li>Sed eget nulla ut massa ultrices lobortis.</li>
           <li>Ut quis nisl fermentum neque tempus placerat.</li>
@@ -112,10 +115,9 @@
           <li>
             Donec luctus sapien eget lectus condimentum, sit amet tempus ante
             tristique.
-          </li>
-        </b>
+          </li>        
       </ol>
-      <br />
+      <br>
       <h3>Tävlingsinformation</h3>
       <p>
         Praesent tempor luctus magna non vulputate. Aliquam erat volutpat. Nam vel
@@ -131,7 +133,7 @@
         <li>Tempor 08</li>
         <li>Vulputate 15</li>
       </ul>
-      <img src="./img/comp.jpg" />
+      <img src="./img/comp.jpg" alt="Tävling">
     </div>
   </div>
   <!-- Banderoll i botten av sidan -->
@@ -139,6 +141,7 @@
     <p>Kontakta oss</p>
     <p>Se våra samarbetspartners och sponsorer</p>
     <p>Ladda ner medlemsappen</p>
-  </div>
-  <script src="./script.js"></script>
+  </div> 
+  <script src="./script.js"></script> 
 </body>
+</html>

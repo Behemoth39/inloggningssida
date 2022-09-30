@@ -1,22 +1,21 @@
-/* EJ FÄRDIG KOMMENTERAT */
-html {
-  height: 100%; /* verkar inte hjälpa, minskar man fönster så blir den inte 100% i höjd */
+html { /* tvingar html elementet till 100% i höjd */
+  min-height: 100%;
 }
-body {
-  display: flex;
-  flex-direction: column;
+body {                       /* sätter placeringen av elemnten inom body i en kollumn */         
+  display: flex;             /*samt tvingar body elementet till 100% i höjd */
+  flex-direction: column;    /* lägger även en bakgrundsbild i body */
   margin: 0%;
   min-height: 100%;
   background-image: url("./img/underwater.jpg");
-  background-size: cover; /* kan inte få bakgrundsbilden att helt fylla sidan vid vissa storlekar av fönstret (se ovan) */
-  /*background-repeat: no-repeat; /* vilket göra att jag inte kan använda no-repeat */
+  background-size: cover; 
+  background-repeat: no-repeat;
 }
 .banner { /* sätter toppbannerns storlek och färg */
   height: 180px;
   width: cover;
   background-color: #bcdcff;
 }
-.banner h1 {
+.banner h1 { /* sätter storlek, placering samt färg på h1 i bannern */
   font-size: 500%;
   text-align: center;
   color: rgb(0, 60, 100);
@@ -28,7 +27,7 @@ body {
   border-top: 2px solid rgb(0, 60, 110);
   border-bottom: 2px solid rgb(0, 60, 110);
 }
-.banner-menu-links { /* sätter placeringen av de olika länkarna i menyraden */
+.banner-menu-links { /* sätter placeringen av länkarnas del i menyraden */
   width: 950px;
   margin: auto;
   height: 50px;
@@ -36,17 +35,17 @@ body {
   flex-direction: row;
   font-size: 150%;
 }
-.banner-menu-links > div {
+.banner-menu-links > div { /* sätter placering av länkarna inom sin del i menyraden */
   text-align: center;
   width: 200px;
   min-width: fit-content;
   margin: auto;
 }
-.banner-menu-links > div a {
+.banner-menu-links > div a { /* sätter utseende på länkarna i menyraden */
   color: black;
   text-decoration: none;
 }
-.loginContainer { /* login menyn */
+.loginContainer { /* login menyns utseende och placering */
   position: fixed;
   top: 50%;
   left: 50%;
@@ -64,7 +63,7 @@ body {
   background-color: #e3f1ff;
   border-radius: 20%;
 }
-.loginContainer p {
+.loginContainer p { /* sätter felmeddelande utseende */
   margin: 10px;
   color: red;
 }
@@ -80,12 +79,12 @@ body {
   border-radius: 15px;
   cursor: pointer;
 }
-#log-h1 {
+#log-h1 {  /* sätter utseende för loginrutans rubik */
   color: black;
   margin-bottom: 25px;
   font-size: 250%;
 }
-.login-windows {
+.login-windows { /* sätter placeringen av fälten för användarnamn och lösenord */
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -96,16 +95,16 @@ body {
   height: 25px;
   text-indent: 50px;
 }
-.login-window:last-of-type {
+.login-window:last-of-type { /* sätter marginal i topp på sista elementet kopplat till klassen */
   margin-top: 20px;
 }
-#user {
+#user { /* sätter bakgrund i fältet för användarnamn */
   background: url(./img/user.png) no-repeat;
   background-position: 7px;
   background-size: 10%;
   background-color: white;
 }
-#pass {
+#pass { /* sätter bakgrund i fältet för lösenord */
   background: url(./img/padlock.png) no-repeat;
   background-position: 7px;
   background-size: 10%;
@@ -117,10 +116,10 @@ body {
   width: fit-content;
   margin: auto;
 }
-.btn-row > div {
+.btn-row > div { /* sätter knapparnas placering i höjdled */
   margin-top: 25px;
 }
-.btn { /* sätter knapparnas utesende */
+.btn { /* sätter knapparnas utseende */
   width: 180px;
   color: white;
   background: linear-gradient(90deg, rgb(0, 68, 255) 0%, rgb(0, 162, 255) 100%);
@@ -131,11 +130,11 @@ body {
   transition-duration: 0.5s;
   border-radius: 10px;
 }
-.btn:hover {
+.btn:hover { /* ändrar knapparnas utseende om man ställer musen över */
   color: rgb(0, 255, 255);
   transform: scaleX(0.9) scaleY(0.9);
 }
-#wel-msg {
+#wel-msg { /* sätter välkomstmeddelandets utseende */
   margin: auto;
   margin-top: 15px;
   margin-bottom: 15px;
