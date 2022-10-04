@@ -1,33 +1,33 @@
-html { /* tvingar html elementet till 100% i höjd */
+html {
   min-height: 100%;
 }
-body {                       /* sätter placeringen av elemnten inom body i en kollumn */         
-  display: flex;             /*samt tvingar body elementet till 100% i höjd */
-  flex-direction: column;    /* lägger även en bakgrundsbild i body */
+body {
+  display: flex;
+  flex-direction: column;
   margin: 0%;
   min-height: 100%;
   background-image: url("./img/underwater.jpg");
-  background-size: cover; 
+  background-size: cover;
   background-repeat: no-repeat;
 }
-.banner { /* sätter toppbannerns storlek och färg */
+.banner {
   height: 180px;
   width: cover;
   background-color: #bcdcff;
 }
-.banner h1 { /* sätter storlek, placering samt färg på h1 i bannern */
+.banner h1 {
   font-size: 500%;
   text-align: center;
   color: rgb(0, 60, 100);
 }
-.banner-menu { /* sätter menyradens storklek och färg */
+.banner-menu {
   display: flex;
   height: 50px;
   background-color: #8cbfe9;
   border-top: 2px solid rgb(0, 60, 110);
   border-bottom: 2px solid rgb(0, 60, 110);
 }
-.banner-menu-links { /* sätter placeringen av länkarnas del i menyraden */
+.banner-menu-links {
   width: 950px;
   margin: auto;
   height: 50px;
@@ -35,17 +35,17 @@ body {                       /* sätter placeringen av elemnten inom body i en k
   flex-direction: row;
   font-size: 150%;
 }
-.banner-menu-links > div { /* sätter placering av länkarna inom sin del i menyraden */
+.banner-menu-links > div {
   text-align: center;
   width: 200px;
   min-width: fit-content;
   margin: auto;
 }
-.banner-menu-links > div a { /* sätter utseende på länkarna i menyraden */
+.banner-menu-links > div a {
   color: black;
   text-decoration: none;
 }
-.loginContainer { /* login menyns utseende och placering */
+.loginContainer {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -63,11 +63,11 @@ body {                       /* sätter placeringen av elemnten inom body i en k
   background-color: #e3f1ff;
   border-radius: 20%;
 }
-.loginContainer p { /* sätter felmeddelande utseende */
+.loginContainer p {
   margin: 10px;
   color: red;
 }
-#closebtn { /* sätter en "knapp" för att stänga login menyn */
+#closebtn {
   position: absolute;
   top: 35px;
   right: 45px;
@@ -79,47 +79,47 @@ body {                       /* sätter placeringen av elemnten inom body i en k
   border-radius: 15px;
   cursor: pointer;
 }
-#log-h1 {  /* sätter utseende för loginrutans rubik */
+#log-h1 {
   color: black;
   margin-bottom: 25px;
   font-size: 250%;
 }
-.login-windows { /* sätter placeringen av fälten för användarnamn och lösenord */
+.login-windows {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
 }
-.login-window { /* sätter utseende av fälten för användarnamn och lösenord*/
+.login-window {
   padding: 8px;
   width: 300px;
   height: 25px;
   text-indent: 50px;
 }
-.login-window:last-of-type { /* sätter marginal i topp på sista elementet kopplat till klassen */
+.login-window:last-of-type {
   margin-top: 20px;
 }
-#user { /* sätter bakgrund i fältet för användarnamn */
+#user {
   background: url(./img/user.png) no-repeat;
   background-position: 7px;
   background-size: 10%;
   background-color: white;
 }
-#pass { /* sätter bakgrund i fältet för lösenord */
+#pass {
   background: url(./img/padlock.png) no-repeat;
   background-position: 7px;
   background-size: 10%;
   background-color: white;
 }
-.btn-row { /* sätter knapparnas placering */
+.btn-row {
   display: flex;
   flex-direction: row;
   width: fit-content;
   margin: auto;
 }
-.btn-row > div { /* sätter knapparnas placering i höjdled */
+.btn-row > div {
   margin-top: 25px;
 }
-.btn { /* sätter knapparnas utseende */
+.btn {
   width: 180px;
   color: white;
   background: linear-gradient(90deg, rgb(0, 68, 255) 0%, rgb(0, 162, 255) 100%);
@@ -130,18 +130,18 @@ body {                       /* sätter placeringen av elemnten inom body i en k
   transition-duration: 0.5s;
   border-radius: 10px;
 }
-.btn:hover { /* ändrar knapparnas utseende om man ställer musen över */
+.btn:hover {
   color: rgb(0, 255, 255);
   transform: scaleX(0.9) scaleY(0.9);
 }
-#wel-msg { /* sätter välkomstmeddelandets utseende */
+#wel-msg {
   margin: auto;
   margin-top: 15px;
   margin-bottom: 15px;
   font-size: 250%;
 }
-.main-content { /* Huvud innehållet på sidan, inehåller 2 rader */
-  width: 950px;  
+.main-content {
+  width: 950px;
   margin: auto;
   margin-top: 0%;
   display: flex;
@@ -152,7 +152,7 @@ body {                       /* sätter placeringen av elemnten inom body i en k
   padding-right: 20px;
   padding-bottom: 20px;
 }
-.main-content-row-1 { /* används för det rad uppdelade innehållet */
+.main-content-row-1 {
   margin-top: 20px;
   width: 425px;
   margin-right: 40px;
@@ -160,22 +160,22 @@ body {                       /* sätter placeringen av elemnten inom body i en k
   padding-left: 15px;
   padding-right: 15px;
 }
-.main-content-row-1 h3 { /* placerar innehållet i mitten */
+.main-content-row-1 h3 {
   margin-bottom: 0%;
   text-align: center;
 }
-.main-content-row-2 { /* används för det rad uppdelade innehållet */
+.main-content-row-2 {
   margin-top: 20px;
   width: 425px;
   background-color: white;
   padding-left: 15px;
   padding-right: 15px;
 }
-.main-content-row-2 h3 { /* placerar innehållet i mitten */
+.main-content-row-2 h3 {
   margin-bottom: 0%;
   text-align: center;
 }
-.foot-banner { /* sätter botten bannerns plasering och storlek samt utseende */
+.foot-banner {
   width: 100%;
   bottom: 0px;
   background-color: #bcdcff;
@@ -184,10 +184,10 @@ body {                       /* sätter placeringen av elemnten inom body i en k
   display: flex;
   flex-direction: row;
 }
-.foot-banner p { /* placerar innehållet med jämna mellanrum */
+.foot-banner p {
   margin-top: 2%;
   margin: auto;
 }
-.hidden { /* används där element ska gömmas */
+.hidden {
   display: none;
 }
